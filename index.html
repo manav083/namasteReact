@@ -5,14 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Namaste React</title>
+    <link rel="stylesheet" href="./index.css" />
 </head>
 
 <body>
+    <div id="header">
+        <h1>Manav is here!</h1>
+    </div>
+    <h1>Hello Top the root</h1>
     <div id="root">
         <!-- With HTML -->
         <!-- <h1>Hello World!</h1> -->
+        <h1>Manav is here!</h1>
+        <!-- Above tag will be replaced(not appended) by 
+            root.render function no many how many tags are there -->
     </div>
+    <h1>Hello Below the root</h1>
+    <!-- this tag will work because react only works
+    in the root tag. So, we can also use react in small 
+    part of our app like header, footer etc. -->
+
+    <!-- Thats why react is library which can be work independently
+    anywhere not a framework because framework requires to build an app
+    from scratch and react just provide 
+    tools for building apps can be used small parts of our app -->
+
+    <!-- Order of these script tag should be in order else it will throw
+     an ERROR on YOUR FACE -->
+
+
+
     <!-- With Javascript -->
     <!-- <script>
         const heading = document.createElement("h1");
@@ -21,14 +44,35 @@
         const root = document.getElementById("root");
         root.appendChild(heading);
     </script> -->
+    
+    <!-- What is crossorigin? -->
+    <!-- It means that the browser can load resources from another domain -->
+    <!-- This is used to prevent CORS (Cross Origin Resource Sharing) -->
+    <!-- CORS is used to prevent malicious scripts from accessing your data -->
+    
+    <!-- What is CDN? -->
+    <!-- CDN is a Content Delivery Network -->
+    <!-- CDNs deliver static files faster than loading them from server -->
+    <!-- CDNs are used to deliver static files like CSS, JS, Images -->
+    <!-- They have multiple servers around the world so when user request
+    <!-- any file then he/she gets response from nearest server -->
+    <!-- CDN is a network of servers distributed globally -->
+    <!-- CDN is used to deliver content to the user faster -->
+    <!-- When you include any file or resource using cdn then first time -->
+    <!-- The browser has to download that file but next time when same file -->
+    <!-- Is requested again then instead of downloading it again -->
+    <!-- The browser will use the cached version -->
+    <!-- That's why it loads files faster -->
+
+
+    
     <!-- CDN of REACT and REACT-DOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
     <!-- With React -->
-    <script>
-        const heading = React.createElement("h1", {}, "Hello World from React!");
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(heading);
+    <script src="./App.js">
     </script>
 </body>
 
