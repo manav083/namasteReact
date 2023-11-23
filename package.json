@@ -1,0 +1,22 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "namaste react by Akshay Saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manav083/namasteReact.git"
+  },
+  "author": "Manav Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manav083/namasteReact/issues"
+  },
+  "homepage": "https://github.com/manav083/namasteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}

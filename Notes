@@ -11,3 +11,39 @@ to the element like "id", "class" etc....
         but a javascript object which also has props.
 
 -> "render() method" : It takes the object created by createElement method and converts it in html tag.
+
+
+-> "Process for configuring git repo --------------"
+        git init
+        git add README.md
+        change branch name to git branch -M main or <branchname>
+        git commit 
+        git remote add origin "repo url"
+        git push origin main or <branchname>
+
+-> "We need to process our code i.e. bundle it, compress it
+optimise it to push it io production that's why me make a build
+or bundle to push it to production."
+
+-> "CRA" - It provides us a scaffold of react app which is already
+        production ready.
+        <------------- It uses webpack and babel as bundler behind the scenes. ------------->
+
+-> "Make our app faster" - React make our app fast but there are lots of other packages that are
+        needed to make our app faster and scalable.
+
+-> "NPM" - Npm manages packages but remember it does not stand for "Node Package Manager".
+        It is a standard repo for all the packages. It is one of biggest repo for packages, libraries
+        and it manages our packages.
+
+-> "Create React App without CRA or vite but from scratch":
+        -- npm init (after this we will get new file called "package.json")
+                // "package.json" - basically configuration of npm that we need in our project.
+                // "Dependencies or dev-dependencies": Packages on which our project depends on exist in "package.json".
+        -- first package needs to be installed is a "Bundler": Our whole code needs to be bundled together, minified, cleaned 
+                before pushing to the production like webpack, parcel and vite.
+                <-------- We will be using parcel as "bundler" in this app ------------>
+                Command used will be "npm install -D parcel"
+        <------------- Dependencies and Dev-Dependencies -------------->
+                Dev dependencies are those which are used in "development" phase 
+                and Dependencies are those which are used in both "development and production" phase.

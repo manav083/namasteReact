@@ -40,7 +40,7 @@ const parent = React.createElement(
 
 const heading = React.createElement("h1", { id: "heading", xyz: "abc" }, "Hello World from React!"); // empty object is used to give attributes to the element like id, classname
 
-console.log(parent);
+// console.log(parent);
 
 // it will return react element i.e. object
 // it has props i.e. attributes + value of element(Hello World from React)
