@@ -1,0 +1,13 @@
+-> "React.createElement" is a core functionality of react but to
+create root element i.e. to put the code in browser we need
+to use "ReactDOM.createRoot()".
+
+-> "React.createElement("h1", {}, "Hello World from React!") "
+empty object in above line of code is used to give attributes
+to the element like "id", "class" etc....
+
+-> "React.createElement()" : 
+        It does not create a element 
+        but a javascript object which also has props.
+
+-> "render() method" : It takes the object created by createElement method and converts it in html tag.
