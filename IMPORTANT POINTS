@@ -1,0 +1,1 @@
+ -> injecting react from cdn is not a preferred way or good way because we will be fetching the react from unpkg.com and it is heavier than having it in our node_modules and other reason is we have to change the url everytime the react version gets changed.

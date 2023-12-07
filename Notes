@@ -1,3 +1,4 @@
+
 -> "React.createElement" is a core functionality of react but to
 create root element i.e. to put the code in browser we need
 to use "ReactDOM.createRoot()".
@@ -47,3 +48,8 @@ or bundle to push it to production."
         <------------- Dependencies and Dev-Dependencies -------------->
                 Dev dependencies are those which are used in "development" phase 
                 and Dependencies are those which are used in both "development and production" phase.
+        -- "To start the app or build it": type "npx parcel source file name i.e. index.html"
+
+-> "Transitive Dependencies": A dependency like parcel can depend on other dependencies 
+                        and those depedencies can depend on others                        
+                        and so on.. All these dependencies get installed in "node_modules"

@@ -35,13 +35,11 @@ Difference between library and framework?
 Difference between git and Github ?
 
 What is ^ caret sign and ~ tilda sign ?
-    Ex- 1.2.0 ----- 1 is major version, 2 is minor version and 0 is patch version.
-
+    <!-- Ex- 1.2.0 ----- 1 is major version, 2 is minor version and 0 is patch version.
     "caret sign" will upgrade minor version of a package without changing major version of a package.
-
     "tilda sign" will upgrade patch/bug fixes version of a package without changing minor version.
-
     to accept any version of a package use "*" instead of mentioning any version (not recommended)
+    to learn more visit "https://medium.com/geekculture/tilde-vs-caret-in-package-json-whats-the-difference-2682b7e6ecf8" -->
 
-    to learn more visit "https://medium.com/geekculture/tilde-vs-caret-in-package-json-whats-the-difference-2682b7e6ecf8"
-
+What is npx?
+    <!-- NPM is to install or uninstall a package or other operations but NPX is used to execute a command or a package. -->
