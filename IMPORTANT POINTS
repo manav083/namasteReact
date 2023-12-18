@@ -1,1 +1,23 @@
  -> injecting react from cdn is not a preferred way or good way because we will be fetching the react from unpkg.com and it is heavier than having it in our node_modules and other reason is we have to change the url everytime the react version gets changed.
+
+ -> What does Parcel do?
+    -- Development build
+    -- Create Local Server
+    -- HMR(Hot Module Replacement or Hot Reloading): As soon as change happens in any file it automatically reflects it on browser without reloading.
+    -- HMR happens because of it uses a "File Watching Algorithm" which is written in C++.
+    -- Caching: It gives you faster build or faster development experience because it do Caching. It stores binary files in our project only.
+    -- Image Optimization: Parcel also do image optimisation so that our build builds faster
+    -- Minification: It also minify our files.
+    -- Bundling: It also creates our bundler or production build.
+    -- Compressing: It also compresses our project and files.
+    -- Content Hashing
+    -- Code Splitting
+    -- Differential bundling: What parcel does is it do differential bundling(creates different bundles) so that our app can run on any browser as well as their older version.
+    -- Error Handling: It gives you correct and beautiful error.
+    -- HTTPs Server: It also gives a feature so that we can host our app on https while doing development also.
+    -- Tree Shaking: It will remove unused code as well example if we are not using few functions in our app then it will remove them automatically.
+    -- Different dev and prod bundles.
+
+    <!-- Read Parcel Documentation VERY IMPORTANT -->
+
+    --> BROWSERSLIST: Read Package browserslist github repo and refer website REFER WEBSITE "https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z".

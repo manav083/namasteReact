@@ -48,7 +48,16 @@ or bundle to push it to production."
         <------------- Dependencies and Dev-Dependencies -------------->
                 Dev dependencies are those which are used in "development" phase 
                 and Dependencies are those which are used in both "development and production" phase.
-        -- "To start the app or build it": type "npx parcel source file name i.e. index.html"
+        -- "To start the app or build it(development)": type "npx parcel source file name i.e. index.html"
+        -- "To Build Production Ready app": npx parcel build index.html but we eill get an error after this
+                because it conflicts with "main" command present in package.json because this command tells 
+                that our entry point is "App.js" or whatever we have present but parcel does not need that so remove that "main" command from package.json before creating production ready build.
+        -- Then this production build gets stored in another folder called "dist".
+        -- To make our app compatible with other browsers: We will use "browserlist" in our package.json
+                It will take an array of brower and their versions. What it will do is our app will definitely 
+                going to support those versions whether it works in others or not.
+                
+                REFER WEBSITE "https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z"
 
 -> "Transitive Dependencies": A dependency like parcel can depend on other dependencies 
                         and those depedencies can depend on others                        
