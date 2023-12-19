@@ -1,0 +1,4 @@
+--> Create Scripts instead of using same commands to create builds and other things in "package.json".
+    -- like start command to create dev build, build command to create prod build.
+
+--> JSX: JSX is not a part of react but it can be used to create react element easily instead of using React.createElement

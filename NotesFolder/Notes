@@ -62,3 +62,5 @@ or bundle to push it to production."
 -> "Transitive Dependencies": A dependency like parcel can depend on other dependencies 
                         and those depedencies can depend on others                        
                         and so on.. All these dependencies get installed in "node_modules"
+
+-> "start": its a keyword reserved by npm in package.json. We can simply use npm start instead of npm run start. both are same in case of "start" command.
