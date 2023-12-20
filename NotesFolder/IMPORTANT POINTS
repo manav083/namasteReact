@@ -20,4 +20,9 @@
 
     <!-- Read Parcel Documentation VERY IMPORTANT -->
 
-    --> BROWSERSLIST: Read Package browserslist github repo and refer website REFER WEBSITE "https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z".
+--> BROWSERSLIST: Read Package browserslist github repo and refer website REFER WEBSITE "https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z".           
+
+--> BABEL:
+   -- Javascript Transpiler or Compiler
+   -- Converts JSX to React.createElement
+   -- Converts es6 to something that even older browser can understands

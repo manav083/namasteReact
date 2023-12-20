@@ -2,3 +2,21 @@
     -- like start command to create dev build, build command to create prod build.
 
 --> JSX: JSX is not a part of react but it can be used to create react element easily instead of using React.createElement
+        -- MYTH: we feel we have written inside javascript or "jsx is html in javascript"
+            but it is not. JSX is completely different.
+        -- JSX has HTML-like or XML-like syntax.
+        -- whether we use react.createElement or use jsx both creates same react objects
+        -- JSX is not a valid javascript syntax because javascript engine cannot understand
+        it because engine or browser can only understand ES6(Ecma Script 6).
+        
+        -- JSX gets transpiled or converted before it reaches to JS engine
+        means it gets converted into something that can be understood by browser or reactDom.render()
+        -- Even render() cannot understand jsx.
+        -- So, PARCEL gives the job of transpiling or converting to the BABEL which is a javascript compiler or transpiler.
+        -- If we have to give attributes to JSX element then we need to use camel-case instead of "-" like in html.
+        -- if we want to write JSX in multiple lines then we need to use () brackets to let BABEL know from where JSX is starting
+            and where it ends. In case of single line () brackets are not mandatory.
+
+        <------------------ PROPER STEPS --------------->
+        JSX - converted or transpiled to React.createElement by Babel => ReactElement-JS Object => HTMLElement using render function.
+
