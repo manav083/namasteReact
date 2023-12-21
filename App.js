@@ -20,6 +20,10 @@ const jsxHeading = <h1 id="jsxheading">Namaste React using JSX</h1>;
 // console.log(jsxHeading);
 
 
+// REACT COMPONENT
+
+
+
 // render jsx heading
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
