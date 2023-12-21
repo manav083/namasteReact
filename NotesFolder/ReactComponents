@@ -1,4 +1,26 @@
-React Components
+# React Components
     - Class Based Components - Old
     - Functional Components - New
+    - Component name should always starts with capital letter else it will throw an error thats how react know its a component.
+
+# Function Component:
+    - A function which returns some piece of jsx.
+    OR
+    - A function which returns a React Element(jsx transpiled to react element at the end).
+
+# Component Composition:
+    - Rendering one component into other component is called component composition.
+
+# We can use arrow function or any other type of function to create functional components but try to use arrow function because it is industry standard and cleaner code.
+
+# if we use {} inside JSX we can run any piece of javascript code inside it.
+
+# React Element is at the end is normal javascript variable so render it using {} inside jsx.
+
+# We can render anything inside anything i.e. react element inside component and vice versa.
+
+# JSX stops cross scripting attack that if we get some malicious data from api JSX won't execute blindly it will escape it or sanitize the code and won't give access to our browser
+
+# JSX makes our code readable not the react because React.createElement is messy so we use JSX which is user friendly and readable which in turn gets transpiled in React.createElement behind the scenes.
+
     
