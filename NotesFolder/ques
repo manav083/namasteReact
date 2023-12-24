@@ -46,6 +46,16 @@ What is npx?
     NPM is to install or uninstall a package or other operations but NPX is used to execute a command or a package.
 
 What is Content Hashing ?
+
+
 What is Code Splitting ?
+
+
 Read about different types of script types in html(MDN Docs)
+
+
 Read about bundlers like vite, webpack, parcel etc..
+
+
+Can we do Named export along with default export ?
+ - Yes we Can use both exports in single file. to read more refer "https://www.freecodecamp.org/news/difference-between-default-and-named-exports-in-javascript/#:~:text=It's%20important%20to%20note%20that,multiple%20additional%20values%20using%20export%20."

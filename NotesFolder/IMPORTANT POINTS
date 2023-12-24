@@ -1,6 +1,6 @@
- -> injecting react from cdn is not a preferred way or good way because we will be fetching the react from unpkg.com and it is heavier than having it in our node_modules and other reason is we have to change the url everytime the react version gets changed.
+# injecting react from cdn is not a preferred way or good way because we will be fetching the react from unpkg.com and it is heavier than having it in our node_modules and other reason is we have to change the url everytime the react version gets changed.
 
- -> What does Parcel do?
+# What does Parcel do?
     -- Development build
     -- Create Local Server
     -- HMR(Hot Module Replacement or Hot Reloading): As soon as change happens in any file it automatically reflects it on browser without reloading.
@@ -20,9 +20,40 @@
 
     <!-- Read Parcel Documentation VERY IMPORTANT -->
 
---> BROWSERSLIST: Read Package browserslist github repo and refer website REFER WEBSITE "https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z".           
+# BROWSERSLIST: 
+   - Read Package browserslist github repo and refer website REFER WEBSITE "https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z".           
 
---> BABEL:
+# BABEL:
    -- Javascript Transpiler or Compiler
    -- Converts JSX to React.createElement
    -- Converts es6 to something that even older browser can understands
+
+# Config Driven UI
+   - UI or website driven by data or config. Example - Swiggy UI changes with location. 
+   - Example delhi may have carousel, but not in bangalore or different offers to display or at some city there is carousel but in other city its not present this is called data driven UI or config driven UI. 
+   - You can change anything and config will come from backend according to some criterion. 
+   - Everything including fontColor, background Color, size, images etc can come in form of data or config from backend.
+
+# Warning: Each child in a list should have a unique "key" prop.
+
+   - We should always give a key or uniqueId when we loop over a list or array.
+   - Suppose, we have a container and in this container we have 5 cards and they dont have any key or unique id and we have a new card then react does not have any way to know which card is new or old so it will re-render all the cards and it will not be good for our website performance but if we always give unique id or key to each card then react will know that which card is new and it will only render it not all of them. It will highly optimise our application. 
+   - Basically, react does not have any way to uniquely identify any card or element if we do not give them key and it will re-render all the cards or elements.
+
+ # ################### Never use indexes as keys ###################
+   - Official documentation also says that do not use indexes as keys. 
+   Read this article https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/ to understand it.
+   - Use index as key as a last resort means only use it only if you do not have any unique key
+
+   --- not using keys (unacceptable)  << index as key  <<<<<<<<<<<<<<<<<<<<<<<<< unique id (best practice)
+
+# Default Export/Import v Named Export/Import
+   - A module can only have one default export.
+   - A module can have multiple named exports. 
+   - if we need to export more than one thing from a file then use named export else default export.
+
+   - export default <name of variable/component>;
+   - import <name of varible/component> from "path";
+   
+   - export const <name of variable/component>;
+   - import {name of variable/component} from "path";

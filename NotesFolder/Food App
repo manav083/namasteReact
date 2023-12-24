@@ -33,3 +33,5 @@
 
     - React wrap all the props as an object.
     - while receiving the props in a component we can destructure the props. This is called "Desturcture on the fly"
+
+
