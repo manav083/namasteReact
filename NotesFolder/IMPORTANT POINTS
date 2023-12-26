@@ -71,3 +71,5 @@
       const list = arr[0]; const setList = arr[1];
       equivalent to 
       const [list, setList] = useState(resData);// this is simply array destructuring on the fly
+# VIRTUAL DOM
+   

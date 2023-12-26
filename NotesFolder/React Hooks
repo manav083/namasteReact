@@ -1,0 +1,17 @@
+# UI layer and data layer work together means updating the DOM efficiently, DOM manipulation.
+    - All the frameworks and libraries are trying to do so means if a list or something change then DOM updated 
+        automatically.
+    - In react we can do this by making a variable as a state. Whenever a state changes then react re-render the DOM automatically without reloading the whole page.
+    - React always keep UI layer and Data layer in sync.
+    - React makes DOM operations superfast.
+
+# React-Hooks:
+    - A hook is a normal javascript utility function given by react which has some pre-defined role.
+
+# Two most important Hooks:
+    - useState() - It is used to generate state variables in react.
+    - useEffect()
+
+# Whenever a state variable changes react re-render our component (in layman's term refreshes our component or update of UI whenever state changes);
+
+
