@@ -1,6 +1,6 @@
 # Two Approaches
     1. load page ----> Api call --got data--> render the ui
-    2. load page ----> render ----> api call --got data-> re-render 
+    2. load page ----> render(SHIMMER UI) ----> api call --got data-> re-render 
 
     We will use 2 approach in react because 2nd approach has better UX(user experience). After loading the page we will render whatever skeleton or ui we can show then do the api call and then re-render the UI. it makes UX experience better as it removes the lagging as well.
 

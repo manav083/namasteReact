@@ -10,8 +10,15 @@
 
 # Two most important Hooks:
     - useState() - It is used to generate state variables in react.
-    - useEffect()
+    - useEffect() - function which gets automayically called after the component is rendered.
 
 # Whenever a state variable changes react re-render our component (in layman's term refreshes our component or update of UI whenever state changes);
+
+
+# When useState should be used?
+    - When we want to change something in our UI on some action like onClick of a button, then normal JS variable cannot be used because it won't change the UI. Then, we should use useState to create a state because whenenver our state gets changed, react will re-render or refresh the component and we will see all the updated values.
+
+# React is updating the const variable using useState. Isn't it conflicting with the concept of JS const variable?
+    - As soon as, set function of useState is called react will re-render the component and create a new instance of the state variable with the new value instead of initial value.
 
 

@@ -71,5 +71,26 @@
       const list = arr[0]; const setList = arr[1];
       equivalent to 
       const [list, setList] = useState(resData);// this is simply array destructuring on the fly
-# VIRTUAL DOM
-   
+
+# React Algo- Reconciliation Algorithm:
+        - It is also known as REACT FIBER.
+        - We have DOM. Supppose we have a container and we have 15 cards in it.
+        Now, my UI changes from 15 cards to 3 cards using some filter.
+        What react does and why react is fast is because react creates VIRTUAL DOM.
+        - When something changes in UI is called RECONCILIATION.
+        - This new Algorithm comes up in React 16 which is a new way of calculating the DIFF.
+        - After REACT 16 this algo is called as REACT FIBER.
+
+# VIRTUAL DOM:
+        - Actual DOM has html tag present in browser and VIRTUAL DOM is the representation of our actual DOM.
+        - VIRTUAL DOM is basically the react elements (the object created by React) or nested react elements.
+
+# Diff Algorithm:
+        - This algorithm finds out the difference between two  virtual DOMS i.e. previous VIRTUAL DOM and updated VIRTUAL DOM.
+        - Suppose previous virtual dom has 15 nodes and after filtering new VD has 3 nodes then the difference is of 12 nodes. So, Diff Algo calculates the difference first then update the Actual DOM. It does not touch the HTML or Actual DOM until it calculates the difference. Only After calculating DIFF it updates the Actual DOM.
+
+# REACT always keeps track of the whole UI in form of virtual DOM.
+
+# Spinner for loading or Shimmer UI:
+   - Spinner is not a good practice and is not used by good companies instead company use SHIMMER UI.
+   - Shimmer UI is a version of UI that doesn't contain the actual content, but instead mimics the layout and shapes of the content that will eventually appear.
