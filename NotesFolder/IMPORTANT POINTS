@@ -57,3 +57,17 @@
    
    - export const <name of variable/component>;
    - import {name of variable/component} from "path";
+
+
+# ##### To read more about React Fiber and Incremental rendering ######
+   refer this https://github.com/acdlite/react-fiber-architecture
+
+
+# useState() - 
+   It return an array which contains a variable and set function:
+      - const arr = useState(resData);
+      - const [list, setList] = arr; 
+      equivalent to 
+      const list = arr[0]; const setList = arr[1];
+      equivalent to 
+      const [list, setList] = useState(resData);// this is simply array destructuring on the fly

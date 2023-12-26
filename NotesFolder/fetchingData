@@ -1,0 +1,14 @@
+# Two Approaches
+    1. load page ----> Api call --got data--> render the ui
+    2. load page ----> render ----> api call --got data-> re-render 
+
+    We will use 2 approach in react because 2nd approach has better UX(user experience). After loading the page we will render whatever skeleton or ui we can show then do the api call and then re-render the UI. it makes UX experience better as it removes the lagging as well.
+
+# useEffect():
+    - useEffect is a function which take two arguments i.e. a callback function(arrow function) & dependency array.
+    - useEffect with empty array will be called after the component is rendered i.e. as soon as render cycle gets completed.
+
+# CORS Policy:
+    - Our browser block us from calling api from one origin to another origin.
+    - if there is any origin mismtach then browser block us from calling the api. This is called CORS Policy.
+    ------- To learn more refer Akshay Saini's CORS video --------

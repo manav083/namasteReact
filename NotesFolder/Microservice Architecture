@@ -1,0 +1,9 @@
+# Monolith Architecture:
+    - There used to be project in which all the part are present in one big project like api, ui, authentication, db connection, notification etc. If we need to do even a slightest change in the project like changing the color of the button then we need to build the whole project to deploy that small change. This kind of architecture is called MONOLITHIC ARCHITECTURE.
+
+# Microservice Architecture
+    - All the services are converted into small projects like UI, backend, auth, Db, SMS, email and all these services combined together creates a big application.
+    - For all small services we create a seprate project which is called as SEPRATION OF CONCERNS and SINGLE RESPONSIBILITY PRINCIPLE means every service has its own responsibility and does not interfere with other in case of deployment or something. Each of this service is called has Microservice. This is called as MICROSERVICES ARCHITECTURE.
+    - One other advantage of this architecture is each microservice can have different tech stack. Example - UI in react, Backend in java, DB in python etc..
+
+
