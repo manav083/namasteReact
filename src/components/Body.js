@@ -7,7 +7,9 @@ const Body = () => {
 
   // State Variable - Super Powerful variable
 
-  const [listofRestaurant, setListOfRestaurant] = useState([]);
+  const [listofRestaurant, setListOfRestaurant] = useState([]); // use to keep the initial data of the api intact
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]); // use to filter and render the restaurants
+  const [searchText, setSearchText] = useState("")
 
   useEffect(() => {
     // this callback function will be called after the component is rendered.
@@ -22,7 +24,8 @@ const Body = () => {
     // setListOfRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants); // Not a good way or standard way
 
     // Always use Optional Chaining
-    setListOfRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
+    setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
+    setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
     // console.log(json);
   }
 
@@ -91,20 +94,43 @@ const Body = () => {
   //   }
   // ];
 
+  // console.log(listofRestaurant);
   // this is also called as conditional rendering using ternary operator
-  return listofRestaurant.length === 0 ? <Shimmer /> :
+  return filteredRestaurant && filteredRestaurant.length === 0 ? <Shimmer /> :
     <div className="body">
-      <div className="filter-btn">
-        <button className="filter-btn"
-          onClick={() => {
-            setListOfRestaurant(listofRestaurant.filter((r) => r.info.avgRating >= 4))
-          }}>
-          Top Rated Restaurant
-        </button>
-        {/* Filter restaurants whose rating is greater than 4.0 */}
+      <div className="filter">
+        <div className="search">
+          <input
+            placeholder="search"
+            type="text"
+            className="search-box"
+            value={searchText}
+            // the value of input text binds to the value of state variable
+            // if we do not update the state variable then the input text will not
+            // going change and will stay the same as initial value i.e. "".
+            // So, we need to change the state variable as soon as input text changes 
+            // That's why we need to include onChange and update the state variable.
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button onClick={() => {
+            // filter the restaurant cards and update the UI
+            // using toLowerCase() to make the search case insensitive
+            searchText != "" ?
+            setFilteredRestaurant(listofRestaurant.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()))) : fetchData()
+          }}>Search</button>
+        </div>
+        <div className="filter-btn">
+          <button className="filter-btn"
+            onClick={() => {
+              setFilteredRestaurant(listofRestaurant.filter((r) => r.info.avgRating >= 4))
+            }}>
+            Top Rated Restaurant
+          </button>
+          {/* Filter restaurants whose rating is greater than 4.0 */}
+        </div>
       </div>
       <div className="restaurant-container">
-        {listofRestaurant.map((r) => <RestaurantCard key={r.info.id} resData={r} />)}
+        {filteredRestaurant.map((r) => <RestaurantCard key={r.info.id} resData={r} />)}
       </div>
     </div>
 

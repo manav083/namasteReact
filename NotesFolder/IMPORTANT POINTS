@@ -94,3 +94,6 @@
 # Spinner for loading or Shimmer UI:
    - Spinner is not a good practice and is not used by good companies instead company use SHIMMER UI.
    - Shimmer UI is a version of UI that doesn't contain the actual content, but instead mimics the layout and shapes of the content that will eventually appear.
+
+# What is a state variable?
+   Whenever a state variable updates, react triggers a reconciliation cycle(re-renders the component);
