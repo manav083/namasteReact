@@ -21,4 +21,15 @@
 # React is updating the const variable using useState. Isn't it conflicting with the concept of JS const variable?
     - As soon as, set function of useState is called react will re-render the component and create a new instance of the state variable with the new value instead of initial value.
 
+# useEffect DEPENDENCY ARRAY:
+    - if no dependency array - useEffect will be called at every render
+    - if empty dependency array - [] - useEffect will be called at initial render only(only once)
+    - if not empty dependency array - [dependency] - useEffect will be called whenever dependency gets updated
+
+# useState BEHAVIOUR:
+    - useState's purpose is used to create local state variable in our functional component
+    - never use useState outside component, higher level
+    - Always declare state on top of the component.
+    - never create state variables inside if else()(condition, loops or functions) statement. It will create inconsistency in react and show unwanted behaviour
+
 

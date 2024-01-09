@@ -1,0 +1,37 @@
+# ROUTING
+
+# createBrowserRouter
+    - provided by react-router-dom
+    - It takes an array of objects of path and what elements needs to be rendered.
+
+# RouterProvider
+    - It is a component provided by react-router-dom
+    - We need to pass the createBrowserRouter config as props to the RouterProvider for routing and render it with the help of root.render.
+    - It basically provide all the routing information to our browser.
+
+
+# ########### There are other types of routers as well like createHashRouter but recommended way is createBrowserRouter. Every type of router has its own purpose. Read Documentation for more... #############
+
+# errorElement
+    - If we want to render a customised page to show a error we can create a component and use it in createBrowserRouter as errorElement
+
+# useRouterError
+    - It is hook provided by react-router-dom
+    - It gives all the information of the error that we get while trying to hit the wrong route.
+
+# children of route
+    - takes list of objects same as createBrowserRouter
+    - Can be used when we want to have the same layout of our pages like headers and footers should always be there and rest of the component will be rendered according to the path of the route.
+#   - Very Important Concept 
+
+# Outlet Component
+    - Provided by react-router-dom
+    - It will load the desired component according to the path or
+    it will get replaced by the children corresponding to the path present in child routes or children.
+
+# ######### We can have multiple parent routes and their children or child routes ##########
+
+# Link Component
+    - provided by react-router-dom
+    - Never use "anchor" tag in react because it reloads the whole page which makes our app slow.
+    - In case of Link it does not reload the whole page but only render the difference between previous page and new page. It makes our so much smooth and fast.

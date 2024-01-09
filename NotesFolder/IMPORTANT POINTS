@@ -97,3 +97,11 @@
 
 # What is a state variable?
    Whenever a state variable updates, react triggers a reconciliation cycle(re-renders the component);
+
+# Two Types of Routing in web app
+   - Client Side Routing
+   - Server Side Routing
+
+   - Server Side Routing is making the call to the file load the page and reload the page like in case of "anchor" tag. It makes the call to html file load the data from network and render it.
+
+   - Client Site Routing is when we already have all the components loaded in our app and just loads the component without making the call. Like in "Link" in react.

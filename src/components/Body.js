@@ -24,8 +24,8 @@ const Body = () => {
     // setListOfRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants); // Not a good way or standard way
 
     // Always use Optional Chaining
-    setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
-    setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
+    setListOfRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
+    setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
     // console.log(json);
   }
 
