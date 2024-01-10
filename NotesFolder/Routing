@@ -35,3 +35,8 @@
     - provided by react-router-dom
     - Never use "anchor" tag in react because it reloads the whole page which makes our app slow.
     - In case of Link it does not reload the whole page but only render the difference between previous page and new page. It makes our so much smooth and fast.
+
+# useParams()
+    - provided by react-router-dom
+    - can be used to make routes dynamically.
+    - we can fetch data from path like ids of our particular data and can fetch data accordingly.
