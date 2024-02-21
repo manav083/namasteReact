@@ -1,0 +1,35 @@
+#Loading Phase
+    - When the class based component gets loaded then an instance of the class gets created and CONSTRUCTOR of the class gets called first then RENDER method gets called.
+    - After CONTRUCTOR and RENDER then COMPONENTDIDMOUNT gets called.
+
+#IN CASE OF CHILD AND PARENT COMPONENT order of methods
+    - constructor of parent
+    - render of parent
+    then it triggers child component then it goes to the child and lifecycle of child starts
+    - constructor of child
+    - render of child
+    - component did mount of child is called (called first because child gets mounted first because of render of parent then it comes back to parent component and component did mount of parent is called).
+    - component did mount of parent is called.
+
+#Why APIs are called in COMPONENTDIDMOUNT?
+    - React wants to quickly render my component and then make API calls gets the data and fill the data in component, thats why we make api calls in componentDidMount because it is called after constructor and render methods.
+
+#TRICK
+    - Suppose there are 2 child components then order of lifecycle methods
+
+    --- Parent Constructor
+    --- Parent Render
+    --- Child1 Constructor
+    --- Child1 render
+    --- Child2 Constructor
+    --- Child2 render
+    --- Child1 componentDidMount
+    --- Child2 componentDidMount
+    --- Parent componentDidMount
+
+    Reason for this there are two phases RENDER phase and COMMIT phase
+    so, render phase for all components batched together then commit phase of all methods.
+    In render phase, all pure and no side effects. may be paused, aborted or restarted by react. In this phase react only find diff or do reconciliation process.
+    And In Commit phase contain all side effects, api calls which will update dom or dom manipulation started because to update DOM is costly. That's how react optimises the performance.
+
+
