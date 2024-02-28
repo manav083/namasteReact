@@ -105,3 +105,7 @@
    - Server Side Routing is making the call to the file load the page and reload the page like in case of "anchor" tag. It makes the call to html file load the data from network and render it.
 
    - Client Site Routing is when we already have all the components loaded in our app and just loads the component without making the call. Like in "Link" in react.
+
+# BIGGEST CON OF SINGLE PAGE APPLICATION
+   - I never reloads our page only render the difference which is also the biggest benefit of it.
+   - CON is, suppose you have used setInterval in a component it will be called even we change the component and will never stop and if we loads the component with same interval again then it will be called again which will leads to very huge performance issues. So, such logics should be deleted before unmounting the component which can be accomplished in "componentWillUnmount".

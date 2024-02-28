@@ -14,7 +14,7 @@ class UserClass extends React.Component {
         // console.log("constructor child", props.name);
 
         this.state = {
-            // count: 0,
+            count: 0,
             userInfo: {
                 name: "Dummy",
                 location: "location",
@@ -28,8 +28,26 @@ class UserClass extends React.Component {
         const data = await fetch("https://api.github.com/users/manav083");
         const json = await data.json();
         this.setState({ userInfo: json });
+        this.timer = setInterval(() => {
+            console.log("NAMASTE REACT OP");
+        }, 1000)
+
+        // by declaring timer using "this" keyword it will be shared all
+        // over the class so we can easily unmount it in componentWillUnmount
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if(this.state.count !== prevState.count){
+
+            console.log("update is called");
+        }
+        console.log("update is called");
+    }
+
+    componentWillUnmount(){
+        console.log("unmount will happen");
+        clearInterval(this.timer);
+    }
     // go to questions
 
     // render method returns some piece of jsx 

@@ -21,10 +21,10 @@ class About extends React.Component {
         <h1>About Class</h1>
         <h1>This is namaste react component</h1>
 
-        {/* <User name="Manav (function)" location="Delhi" /> */}
+        <User name="Manav (function)" location="Delhi" />
 
 
-        <UserClass name="Manav (class)" location="Delhi" />
+        {/* <UserClass name="Manav (class)" location="Delhi" /> */}
         {/* <UserClass name="Aksahy Saini" location="Dehradun" /> */}
       </div>
     )
