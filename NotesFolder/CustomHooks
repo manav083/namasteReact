@@ -1,0 +1,6 @@
+# Few things to remembers
+    - What is the contract means what we need as input?
+    or what we need from the collar i.e. from the component in which this hook will be called or used.
+    
+    - And what we want as output from that hook or what we
+    want to return.

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 // import { resData } from "../utils/mockData";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/customHooks/useOnlineStatus";
 
 const Body = () => {
 
@@ -25,7 +26,7 @@ const Body = () => {
 
     // Always use Optional Chaining
     setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
-    setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
+    setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     // console.log(json);
   }
 
@@ -96,6 +97,12 @@ const Body = () => {
 
   // console.log(listofRestaurant);
   // this is also called as conditional rendering using ternary operator
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return <h1>Looks like you are offline. Please Check your internet connection.</h1>
+  }
   return filteredRestaurant && filteredRestaurant.length === 0 ? <Shimmer /> :
     <div className="body">
       <div className="filter">
@@ -116,7 +123,7 @@ const Body = () => {
             // filter the restaurant cards and update the UI
             // using toLowerCase() to make the search case insensitive
             searchText != "" ?
-            setFilteredRestaurant(listofRestaurant.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()))) : fetchData()
+              setFilteredRestaurant(listofRestaurant.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()))) : fetchData()
           }}>Search</button>
         </div>
         <div className="filter-btn">
