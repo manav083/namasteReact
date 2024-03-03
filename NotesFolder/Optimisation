@@ -1,0 +1,13 @@
+# Optimisation
+    - When we create a bundle using a bundler for our app,
+    what it does is it merge all our components into one single javascript file and this file gets loaded into the browser. 
+    - But the problem with this is as the number of components increases the size of this file also increases and loading time for this also incresed significantly which leads to the increase of loading time for our pages in web application.
+    - To overcome this we have a solution called "Chunking" or "Code Splitting" or "Dynamic Bundling" or "Lazy Loading" or "On Demand Loading"(all are same).
+    - This process is very much important to build a huge application or a scalable appication.
+
+# How to do Code Splitting
+    - create small small applications inside a huge application.
+    - A bundle should have all the code for a certain feature or a part of our application. For example, makemytrip has 10 different services like flights, hotels, homestays, trains etc. so, each one these features can have their own bundle like a small application. 
+
+# Lazy loading or On demand loading(same as code splitting, chunking)
+    - What it does it will not load the given component at the same time but it will only load it when we will want use that component. 
