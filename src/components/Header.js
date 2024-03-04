@@ -26,12 +26,12 @@ const Header = () => {
     //     console.log("useEffect called");
     // }, [btnName]);
     return (
-        <div className="header">
-            <div className="logo">
+        <div className="flex justify-between">
+            <div className="w-[7rem]">
                 <img src={LOGO_URL} />
             </div>
-            <div className="nav-items">
-                <ul>
+            <div>
+                <ul className="flex p-4 m-4">
                     <li style={{display: "flex"}}>Online Status: <div style={{width: 30, height: 30, borderRadius: "50%", backgroundColor: onlineStatus ? "lightgreen" : "red"}}></div></li>
                     <Link to="/"><li>Home</li></Link>
                     <Link to="/about"><li>About Us</li></Link>

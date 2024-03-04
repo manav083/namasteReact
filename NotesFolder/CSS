@@ -1,0 +1,10 @@
+# Ways to implement css
+    - CSS (index.css)
+    - SASS/SCSS (css with some superpowers)
+    - Styled-Components(most of the big companies use this method. read documentation. It is package)
+    - CSS frameworks/libraries - Ant Design, Material UI, Bootstrap, Chakra UI, Tailwind CSS etc..
+
+# Tailwind CSS
+    - npm install -D tailwindcss postcss
+    - postcss is a tool to transform javascript into css. Tailwind use postcss behind the scenes.
+    - It gives classnames for every css property you want to apply in your app.
