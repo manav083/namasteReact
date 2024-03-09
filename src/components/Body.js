@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 // import { resData } from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/customHooks/useOnlineStatus";
@@ -11,6 +11,9 @@ const Body = () => {
   const [listofRestaurant, setListOfRestaurant] = useState([]); // use to keep the initial data of the api intact
   const [filteredRestaurant, setFilteredRestaurant] = useState([]); // use to filter and render the restaurants
   const [searchText, setSearchText] = useState("")
+
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     // this callback function will be called after the component is rendered.
@@ -24,6 +27,7 @@ const Body = () => {
 
     // setListOfRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants); // Not a good way or standard way
 
+    console.log(json?.data?.cards)
     // Always use Optional Chaining
     setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
     setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -95,7 +99,7 @@ const Body = () => {
   //   }
   // ];
 
-  // console.log(listofRestaurant);
+  console.log(listofRestaurant);
   // this is also called as conditional rendering using ternary operator
 
   const onlineStatus = useOnlineStatus();
@@ -106,11 +110,11 @@ const Body = () => {
   return filteredRestaurant && filteredRestaurant.length === 0 ? <Shimmer /> :
     <div className="body">
       <div className="filter">
-        <div className="search">
+        <div className="search ml-[20px]">
           <input
             placeholder="search"
             type="text"
-            className="search-box"
+            className="border-[2px] p-[10px_15px]"
             value={searchText}
             // the value of input text binds to the value of state variable
             // if we do not update the state variable then the input text will not
@@ -119,15 +123,17 @@ const Body = () => {
             // That's why we need to include onChange and update the state variable.
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button onClick={() => {
-            // filter the restaurant cards and update the UI
-            // using toLowerCase() to make the search case insensitive
-            searchText != "" ?
-              setFilteredRestaurant(listofRestaurant.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()))) : fetchData()
-          }}>Search</button>
+          <button
+            className="bg-[orange] w-max p-[10px_15px] m-[20px] text-white shadow-xl"
+            onClick={() => {
+              // filter the restaurant cards and update the UI
+              // using toLowerCase() to make the search case insensitive
+              searchText != "" ?
+                setFilteredRestaurant(listofRestaurant.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()))) : fetchData()
+            }}>Search</button>
         </div>
-        <div className="filter-btn">
-          <button className="filter-btn"
+        <div className="bg-[orange] w-max p-[10px_15px] m-[20px] text-white shadow-xl">
+          <button
             onClick={() => {
               setFilteredRestaurant(listofRestaurant.filter((r) => r.info.avgRating >= 4))
             }}>
@@ -136,8 +142,8 @@ const Body = () => {
           {/* Filter restaurants whose rating is greater than 4.0 */}
         </div>
       </div>
-      <div className="restaurant-container">
-        {filteredRestaurant.map((r) => <RestaurantCard key={r.info.id} resData={r} />)}
+      <div className="flex justify-center flex-wrap gap-[10px] mt-[20px] p-[10px]">
+        {filteredRestaurant.map((r) => <RestaurantCardPromoted key={r.info.id} resData={r} />)}
       </div>
     </div>
 

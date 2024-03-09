@@ -1,0 +1,18 @@
+# What is HOC?
+    - It is a javascript function which takes a component as input 
+    and returns a new enhanced component with some new modifications and changes.
+
+# Controlled & Uncontrolled Components
+    - The child component whose actions are controlled by parent component are controlled
+    and whose actions are not controlled by parent component are called uncontrolled.
+
+# Lifting the state Up
+    - Updating the parent state from child component, read more about this from react docs....
+
+# Props Drilling
+    - Passing props from one parent to child and that child to its child and so on is called props 
+    drilling. Passing props is necessary and important but should avoid props drilling if there are many levels 
+    of child and we want to pass from top to bottom. Can be accomplished using "Context API". Read more from docs...
+
+# Context Api
+    - 

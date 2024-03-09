@@ -10,7 +10,7 @@ const RestaurantCard = ({ resData }) => {
     // console.log(resData?.info);
     return (
         <Link to= {"/restaurants/" + resData?.info.id}>
-            <div className="res-card">
+            <div className="bg-[lightgray] p-[10px] m-[10px]">
                 <img className="res-logo" src={`${CDN_URL}${cloudinaryImageId}`} alt="" />
                 <h3>{name}</h3>
                 <h4>{cuisines.toString().length < 30 ? cuisines.toString() : cuisines.toString().slice(0, 30) + "..."}</h4>
@@ -21,5 +21,21 @@ const RestaurantCard = ({ resData }) => {
     )
 }
 
+
+// Higher Order Component
+
+// It takes input - Restaurant Card
+// Output - Restaurant Card with Promoted tag
+
+export const withPromotedLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div>
+                <label className="bg-black text-white p-2 rounded">Promoted</label>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
+}
 
 export default RestaurantCard
