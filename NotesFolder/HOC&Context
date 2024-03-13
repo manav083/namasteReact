@@ -15,4 +15,4 @@
     of child and we want to pass from top to bottom. Can be accomplished using "Context API". Read more from docs...
 
 # Context Api
-    - 
+    - Suppose we want some data that needs to be accessed from anywhere in our app or in whole app like dark theme, login data. We cant use props in this scenario. So, we can do this using Context Api.

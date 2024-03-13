@@ -1,12 +1,14 @@
 import { CDN_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = ({ resData }) => {
     // console.log(props);
     const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } = resData?.info;
     // console.log(cuisines.toString().length);
     const { deliveryTime } = resData?.info?.sla
-
+    const data = useContext(UserContext);
     // console.log(resData?.info);
     return (
         <Link to= {"/restaurants/" + resData?.info.id}>
@@ -17,6 +19,7 @@ const RestaurantCard = ({ resData }) => {
                 <h4>{avgRating} starts</h4>
                 <h4>{costForTwo}</h4>
                 <h4>{deliveryTime} MINS</h4>
+                <h4>User: {data.loggedInUser}</h4>
             </div></Link>
     )
 }
