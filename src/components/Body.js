@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 // import { resData } from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/customHooks/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
@@ -27,7 +28,7 @@ const Body = () => {
 
     // setListOfRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants); // Not a good way or standard way
 
-    console.log(json?.data?.cards)
+    // console.log(json?.data?.cards)
     // Always use Optional Chaining
     setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // Not a good way or standard way
     setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -99,10 +100,12 @@ const Body = () => {
   //   }
   // ];
 
-  console.log(listofRestaurant);
+  // console.log(listofRestaurant);
   // this is also called as conditional rendering using ternary operator
 
   const onlineStatus = useOnlineStatus();
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   if (onlineStatus === false) {
     return <h1>Looks like you are offline. Please Check your internet connection.</h1>
@@ -141,6 +144,8 @@ const Body = () => {
           </button>
           {/* Filter restaurants whose rating is greater than 4.0 */}
         </div>
+        <label>UserName: </label>
+        <input className="p-2 border-[2px]" type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
       </div>
       <div className="flex justify-center flex-wrap gap-[10px] mt-[20px] p-[10px]">
         {filteredRestaurant.map((r) => <RestaurantCardPromoted key={r.info.id} resData={r} />)}

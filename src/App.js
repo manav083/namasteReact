@@ -39,18 +39,18 @@ const Grocery = lazy(() => import("./components/Grocery"));
 
 
 const AppLayout = () => {
-    const [userInfo, setUserInfo] = useState();
+    const [userName, setUserName] = useState("");
 
     useEffect(() => {
         const data = {
             name: "Manav Jain",
         };
 
-        setUserInfo(data.name);
-    })
+        setUserName(data.name);
+    }, [])
 
     return (
-        <UserContext.Provider value={{ loggedInUser: userInfo }}>
+        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
             <div className="app">
                 <Header />
                 {/* If path is "/"
