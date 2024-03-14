@@ -29,19 +29,19 @@ const Header = () => {
     //     console.log("useEffect called");
     // }, [btnName]);
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between shadow-2xl">
             <div className="w-[7rem]">
                 <img src={LOGO_URL} />
             </div>
             <div>
-                <ul className="flex p-4 m-4">
-                    <li style={{display: "flex"}}>Online Status: <div style={{width: 30, height: 30, borderRadius: "50%", backgroundColor: onlineStatus ? "lightgreen" : "red"}}></div></li>
+                <ul className="flex p-4 m-4 gap-4 items-center font-bold cursor-pointer">
+                    <li style={{display: "flex"}}>Online Status: {onlineStatus ? "🚀" : "✅"}</li>
                     <Link to="/"><li>Home</li></Link>
                     <Link to="/about"><li>About Us</li></Link>
                     <Link to="/contact"><li>Contact Us</li></Link>
                     <Link to="/grocery"><li>Grocery</li></Link>
                     <li>Cart</li>
-                    <button className="login"
+                    <button className="bg-[red] p-[10px_15px] rounded-md text-white"
                         onClick={() => btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")}
                     >
                         {btnName}

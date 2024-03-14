@@ -1,0 +1,38 @@
+# Redux Store
+    - It is kind of like a big javascript object which is kept at a central place and any component can access it inside our application. 
+    - We can store all our major data inside it.
+
+# Slices
+    - So, our redux store does not get clumsy or very huge, we can divide it into smaller parts called slices.
+    - We need slices to seperate our data logically and data does not get messy.
+    - We cannot modify a slice directly. The process is when we want to modify a slice we have to "dispatch"
+    an "action" which calls a function and that function will modify the slice internally.
+
+# Structure
+        - create a slice using createSlice
+        - it will have a name, initialState which is an object which contains states of slice with initial values.
+        - it will have reducers with their respective logics and modify our states according to that logic.
+
+# Reducer
+    - The "function" that is called when we "dispatch" an
+    "action" is called as "Reducer".
+
+# Selector
+    - To read data from a slice we use "selector".
+    - This selector will give data to our component and modify our component.
+    - This process of using selector and reading data is called "Subscribing to the store".
+    - At last, we need to export two things, first export const {actions(like addItem, removeItem)} = cartSlice.actions. Second thing is export reducer like export default cartSlice.reducer.
+
+# Process
+ - install libraries @reduxjs/toolkit and react-redux
+ - build our store
+ - connect our store with our app
+ - create slice(cartSlice)
+ - dispatch(action)
+ - selector
+
+# detail process
+    - build store using "configureStore" given by reduxjs/toolkit.
+    - provide store to whole app by wrapping "Provider" given by react-redux and passing our store as props.
+    - then create slices using createSlice given by @reduxjs/toolkit.
+    - add slice to the store

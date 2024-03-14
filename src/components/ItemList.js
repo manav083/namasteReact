@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 const ItemList = ({ items }) => {
     // console.log(items)
@@ -11,6 +12,7 @@ const ItemList = ({ items }) => {
                         <span>-₹{item?.card?.info?.price ? item?.card?.info?.price / 100 : item?.card?.info?.defaultPrice / 100}</span>
                     </div>
                     <p className='mb-3 text-xs text-gray-500'>{item?.card?.info?.description}</p>
+                    <div className='bg-black text-white p-[10px_15px] w-max m-[10px] rounded-md cursor-pointer'>Add To Cart</div>
                 </div>
             ))}
         </div>

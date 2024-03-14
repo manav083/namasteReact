@@ -9,7 +9,8 @@ import ResturantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 // import Grocery from "./components/Grocery";
-
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 
 // Chunking
@@ -50,19 +51,21 @@ const AppLayout = () => {
     }, [])
 
     return (
-        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-            <div className="app">
-                <Header />
-                {/* If path is "/"
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+                <div className="app">
+                    <Header />
+                    {/* If path is "/"
             <Body />
             If path is "/about"
             <About />
             If path is "/contact"
             <Contact /> */}
-                <Outlet />
+                    <Outlet />
 
-            </div>
-        </UserContext.Provider>
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 }
 
