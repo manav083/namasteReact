@@ -134,18 +134,17 @@ const Body = () => {
               searchText != "" ?
                 setFilteredRestaurant(listofRestaurant.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()))) : fetchData()
             }}>Search</button>
-        </div>
-        <div className="bg-[orange] w-max p-[10px_15px] m-[20px] text-white shadow-xl">
           <button
+            className="bg-[orange] w-max p-[10px_15px] m-[20px] text-white shadow-xl"
             onClick={() => {
               setFilteredRestaurant(listofRestaurant.filter((r) => r.info.avgRating >= 4))
             }}>
             Top Rated Restaurant
           </button>
+          <label>UserName: </label>
+          <input className="p-2 border-[2px]" type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
           {/* Filter restaurants whose rating is greater than 4.0 */}
         </div>
-        <label>UserName: </label>
-        <input className="p-2 border-[2px]" type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
       </div>
       <div className="flex justify-center flex-wrap gap-[10px] mt-[20px] p-[10px]">
         {filteredRestaurant.map((r) => <RestaurantCardPromoted key={r.info.id} resData={r} />)}

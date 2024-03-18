@@ -1,0 +1,49 @@
+# Types of testing a developer can do:
+    - Unit testing
+    - Integration testing
+    - End to End testing - e2e testing
+
+# Unit Testing
+    - Test your components in isolation or test the individual component.
+
+# Integration Testing
+    - Testing the integration of components i.e. testing of components and their impact on other components.
+
+# End to End testing
+    - Testing of whole flow i.e., from the time user enters the website to the time user leaves the website.
+    - Can be done using tools like cypress, selenium etc.
+
+# Developers are solely responsible for two types of testing i.e. Unit Testing and Integration Testing.
+
+
+
+# Libraries used to write test cases.
+    - React testing library(based on dom testing library which is based on Jest). Basically, RTL use Jest behind the scenes.
+    - To setup RTL we need jest in our project as well.
+
+# Setting Up testing in our app:
+    ---> Install RTL 
+    ---> Install Jest 
+    ---> Install Babel dependencies(jest use babel bts) 
+    ---> Configure babel
+**** because parcel itself use babel bts therefore, it will create
+conflict with jest. So, we need to configure babel accordingly so that
+it works properly *****
+    ---> configure parcel config to disable default babel transpilation.
+    ---> write Jest configuration by command 'npx jest --init'.
+**** jsdom(browser-like): these test cases will not run browser so they
+ will need a environment to run so, jsdom is a library which works
+ like a browser not exactly like a browser. ****
+    ---> Install jest-environment-jsdom
+    ---> Create TestCases.
+
+# Start 
+    - Create Folder anywhere in app called --test-- and
+    all the js or ts files inside "jest" will be considered them
+    as test files. 
+    - OR, files with extension as test.js, test.ts, spec.js, spec.ts
+    will be considered as test files by "jest".
+    
+
+
+    
