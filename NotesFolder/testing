@@ -38,6 +38,8 @@ it works properly *****
     ---> Create TestCases.
     ---> Install @babel/preset-react to support jsx in our testing files which will not work otherwise.
     ---> Include @babel/preset-react inside babel config.
+    ---> Install @testing-library/jest-dom as dev dependency to support testing functions like toBeInTheDocument().
+    ---> import @testing-library/jest-dom library in test file like import "@testing-library/jest-dom".
 
 # Start 
     - Create Folder anywhere in app called --test-- and
