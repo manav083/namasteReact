@@ -36,6 +36,8 @@ it works properly *****
  like a browser not exactly like a browser. ****
     ---> Install jest-environment-jsdom
     ---> Create TestCases.
+    ---> Install @babel/preset-react to support jsx in our testing files which will not work otherwise.
+    ---> Include @babel/preset-react inside babel config.
 
 # Start 
     - Create Folder anywhere in app called --test-- and
@@ -43,6 +45,7 @@ it works properly *****
     as test files. 
     - OR, files with extension as test.js, test.ts, spec.js, spec.ts
     will be considered as test files by "jest".
+
     
 
 
